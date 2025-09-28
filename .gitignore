@@ -1,0 +1,40 @@
+# -----------------------------
+# Python / Django
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+*.log
+*.pot
+
+# Virtual env
+venv/
+.venv/
+
+# Django static & media
+/staticfiles/
+/media/
+
+# Local settings
+.env
+
+# -----------------------------
+# React / Node
+# -----------------------------
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# -----------------------------
+# IDE / Editor
+# -----------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
