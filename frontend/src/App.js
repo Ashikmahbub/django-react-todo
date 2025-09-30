@@ -140,6 +140,25 @@ function App() {
           </button>
         </div>
       )}
+		 {/* Admin Panel Link */}
+      <a
+        href="http://127.0.0.1:8000/admin/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-block",
+          marginTop: "20px",
+          padding: "10px 20px",
+          backgroundColor: "#007BFF",
+          color: "#fff",
+          borderRadius: "5px",
+          textDecoration: "none",
+        }}
+      >
+        Go to Admin Panel
+      </a>
+
+
     </div>
   );
 }
