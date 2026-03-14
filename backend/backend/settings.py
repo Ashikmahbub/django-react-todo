@@ -56,14 +56,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 # ── DATABASE ───────────────────────────────────────────────────
 DATABASES = {
-    'default': {
-        'ENGINE':   'django.db.backends.postgresql',
-        'NAME':     os.getenv('DB_NAME',     'todo_db'),
-        'USER':     os.getenv('DB_USER',     'ashik'),
-        'PASSWORD': os.getenv('DB_PASSWORD', '1234'),
-        'HOST':     os.getenv('DB_HOST',     'db'),
-        'PORT':     os.getenv('DB_PORT',     '5432'),
-    }
+    'default': dj_database_url.config(
+        default=f"postgresql://{os.getenv('DB_USER','ashik')}:"
+                f"{os.getenv('DB_PASSWORD','1234')}@"
+                f"{os.getenv('DB_HOST','db')}:"
+                f"{os.getenv('DB_PORT','5432')}/"
+                f"{os.getenv('DB_NAME','todo_db')}",
+        conn_max_age=600,
+    )
 }
 
 # ── REST FRAMEWORK ─────────────────────────────────────────────
